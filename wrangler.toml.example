@@ -1,7 +1,0 @@
-name = "wa-estudio-fotografico"
-compatibility_date = "2026-09-14"
-
-# O binding abaixo também pode ser configurado pelo painel do Pages.
-# [[r2_buckets]]
-# binding = "MEDIA"
-# bucket_name = "wa-estudio-media"
