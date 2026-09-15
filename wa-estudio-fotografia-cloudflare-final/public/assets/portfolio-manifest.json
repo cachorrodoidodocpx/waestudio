@@ -1,0 +1,103 @@
+{
+  "bebe-reborn": [],
+  "casamento": [],
+  "datas-especiais": [
+    {
+      "src": "assets/portfolio/datas-especiais/01.webp",
+      "index": 1
+    },
+    {
+      "src": "assets/portfolio/datas-especiais/02.webp",
+      "index": 2
+    },
+    {
+      "src": "assets/portfolio/datas-especiais/03.webp",
+      "index": 3
+    },
+    {
+      "src": "assets/portfolio/datas-especiais/04.webp",
+      "index": 4
+    }
+  ],
+  "ensaios": [
+    {
+      "src": "assets/portfolio/ensaios/01.webp",
+      "index": 1
+    },
+    {
+      "src": "assets/portfolio/ensaios/02.webp",
+      "index": 2
+    },
+    {
+      "src": "assets/portfolio/ensaios/03.webp",
+      "index": 3
+    },
+    {
+      "src": "assets/portfolio/ensaios/04.webp",
+      "index": 4
+    }
+  ],
+  "familia": [
+    {
+      "src": "assets/portfolio/familia/01.webp",
+      "index": 1
+    },
+    {
+      "src": "assets/portfolio/familia/02.webp",
+      "index": 2
+    },
+    {
+      "src": "assets/portfolio/familia/03.webp",
+      "index": 3
+    },
+    {
+      "src": "assets/portfolio/familia/04.webp",
+      "index": 4
+    }
+  ],
+  "gestante": [
+    {
+      "src": "assets/portfolio/gestante/01.webp",
+      "index": 1
+    },
+    {
+      "src": "assets/portfolio/gestante/02.webp",
+      "index": 2
+    },
+    {
+      "src": "assets/portfolio/gestante/03.webp",
+      "index": 3
+    },
+    {
+      "src": "assets/portfolio/gestante/04.webp",
+      "index": 4
+    }
+  ],
+  "infantil": [
+    {
+      "src": "assets/portfolio/infantil/01.webp",
+      "index": 1
+    },
+    {
+      "src": "assets/portfolio/infantil/02.webp",
+      "index": 2
+    },
+    {
+      "src": "assets/portfolio/infantil/03.webp",
+      "index": 3
+    },
+    {
+      "src": "assets/portfolio/infantil/04.webp",
+      "index": 4
+    },
+    {
+      "src": "assets/portfolio/infantil/05.webp",
+      "index": 5
+    },
+    {
+      "src": "assets/portfolio/infantil/06.webp",
+      "index": 6
+    }
+  ],
+  "natal": []
+}

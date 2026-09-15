@@ -1,0 +1,12 @@
+{
+  "name": "wa-estudio-fotografico",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4.33.0"
+  }
+}
