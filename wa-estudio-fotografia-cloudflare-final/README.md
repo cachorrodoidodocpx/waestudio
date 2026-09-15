@@ -1,42 +1,28 @@
-# WA Estúdio Fotográfico — Cloudflare Workers + R2
+# WA Estúdio Fotográfico — Cloudflare Workers + R2 + Admin
 
-Site estático com painel administrativo para adicionar/remover fotos. O projeto usa **Cloudflare Workers Static Assets** para o site e **Cloudflare R2** para as imagens enviadas pelo painel.
+Site estático com painel administrativo completo para gerenciar as sessões e todas as fotos de “Histórias reais”.
+
+## O que o painel faz
+- Lista todas as fotos atuais, inclusive as fotos que vieram na primeira versão.
+- Importa as fotos iniciais para o R2, tornando-as editáveis.
+- Adiciona novas fotos a qualquer sessão.
+- Troca uma foto por outra.
+- Exclui fotos.
+- Cria novas sessões (ex.: Animais, Corporativo, Pets).
+- Edita nome e subtítulo das sessões.
+- Reordena sessões.
+- Exclui uma sessão e todas as fotos dela.
 
 ## Estrutura
-- `public/index.html` — site público
-- `public/admin.html` — painel administrativo
-- `public/styles.css` / `public/script.js` — visual e comportamento
-- `public/assets/` — logo e algumas fotos iniciais do portfólio
-- `src/index.js` — Worker com API, autenticação e acesso ao R2
-- `wrangler.toml` — configuração do Worker, assets e R2
+- `public/` — site e assets estáticos
+- `src/index.js` — Worker/API
+- `wrangler.toml` — configuração do Worker + R2
 
 ## Cloudflare
-Crie um bucket R2 chamado exatamente:
+O projeto usa:
+- R2 bucket binding `MEDIA` apontando para `wa-estudio-media`.
+- Assets estáticos binding `ASSETS`.
+- Secret `ADMIN_PASSWORD`.
+- Secret `SESSION_SECRET`.
 
-`wa-estudio-media`
-
-Depois, no Worker, crie os secrets:
-
-- `ADMIN_PASSWORD` — senha do painel
-- `SESSION_SECRET` — string aleatória longa, diferente da senha
-
-O `wrangler.toml` já declara o binding `MEDIA` apontando para `wa-estudio-media`.
-
-## Deploy pelo painel da Cloudflare
-O repositório deve ter esta estrutura na raiz. No formulário de deploy:
-
-- Build command: deixe vazio
-- Deploy command: `npx wrangler deploy`
-
-## Como usar o painel
-Abra `https://SEU-DOMINIO/admin.html`, entre com a senha, escolha a categoria, selecione as fotos e envie. As fotos são armazenadas em R2 e aparecem na galeria pública.
-
-Categorias: Casamentos, Gestante, Baby Reborn, Acompanhamento Infantil, Família, Ensaios, Natal e Datas Especiais.
-
-## Limites no painel
-- JPG, PNG ou WEBP
-- até 15 MB por foto
-- múltiplas fotos por envio
-
-## Observação
-As fotos que já estão em `public/assets/portfolio/` são arquivos estáticos e continuam funcionando mesmo antes de qualquer upload pelo painel. As fotos novas entram pelo R2.
+No primeiro acesso ao painel, as fotos que vieram no pacote continuam sendo estáticas. Use **“Importar fotos atuais para o painel”** uma vez. Depois disso, o site passa a usar o R2 como fonte do portfólio e você poderá administrar tudo pelo `/admin.html`.
